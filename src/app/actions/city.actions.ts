@@ -1,4 +1,5 @@
 import { Action } from "@ngrx/store";
+import { City } from "../models/city.models";
 
 export enum CityActionType{
   GET_ALL_CITIES = "[City]GET_ALL_CITIES",
@@ -11,11 +12,11 @@ export enum CityActionType{
 }
 export class GetAllCitiesACTION implements Action{
   type:CityActionType = CityActionType.GET_ALL_CITIES;
-  constructor(public payload : string){}
+  constructor(public payload : any){}
 }
 export class GetAllCitiesSuccesACTION implements Action{
   type:CityActionType = CityActionType.GET_ALL_CITIES_SUCCESS;
-  constructor(public payload : string){}
+  constructor(public payload : City[]){}
 }
 export class GetAllCitiesErrorACTION implements Action{
   type:CityActionType = CityActionType.GET_ALL_CITIES_ERROR;

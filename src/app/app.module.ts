@@ -20,7 +20,8 @@ import { EffectsModule } from '@ngrx/effects';
    imports: [
     BrowserModule,
     AppRoutingModule,
-    EffectsModule.forRoot(),
+    StoreModule.forRoot({state: CityReducer}),
+    EffectsModule.forRoot({}),
     HttpClientModule,
     StoreDevtoolsModule.instrument(),
   ],
