@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
-  { path: "/", component: MainComponent}
+{path:"", component: MainComponent},
 ];
 
 @NgModule({

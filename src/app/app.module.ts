@@ -7,22 +7,26 @@ import { StoreModule } from '@ngrx/store';
 import { MainComponent } from './components/main/main.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { RouterModule } from '@angular/router';
 import { CityReducer } from './reducer/city.reducer';
 import { EffectsModule } from '@ngrx/effects';
+import { CityEffects } from './effects/city.effects';
+import { FormCityComponent } from './components/form-city/form-city.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    NavBarComponent
+    NavBarComponent,
+    FormCityComponent
   ],
    imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({state: CityReducer}),
-    EffectsModule.forRoot({}),
+    EffectsModule.forRoot([CityEffects]),
     HttpClientModule,
+    FormsModule,
     StoreDevtoolsModule.instrument(),
   ],
   providers: [],

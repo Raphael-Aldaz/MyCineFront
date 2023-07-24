@@ -25,11 +25,11 @@ export class GetAllCitiesErrorACTION implements Action{
 
 export class SaveCityACTION implements Action{
   type:CityActionType = CityActionType.SAVE_CITY;
-  constructor(public payload : string){}
+  constructor(public payload : City){}
 }
 export class SaveCitySuccesACTION implements Action{
   type:CityActionType = CityActionType.SAVE_CITY_SUCCESS;
-  constructor(public payload : string){}
+  constructor(public payload : City){}
 }
 export class SaveCityErrorACTION implements Action{
   type:CityActionType = CityActionType.SAVE_CITY_ERROR;

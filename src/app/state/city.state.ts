@@ -9,11 +9,11 @@ export enum CityStateEnumm{
 
 export interface CityState{
   city: City[],
-  errorMessage: string,
+  message: string,
   dataState: CityStateEnumm,
 }
 export const cityState : CityState = {
   city : [],
-  errorMessage:"error",
+  message:"",
   dataState : CityStateEnumm.INITIAL
 }
